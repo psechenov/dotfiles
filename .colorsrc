@@ -1,31 +1,5 @@
-
-export HISTCONTROL=ignoredups:ignorespace
-export HISTSIZE=10000000
-export HISTFILESIZE=1000000000
-shopt -s histappend
-
 export TERM=xterm-color
-export EDITOR=/usr/bin/vim
-
-# I'd quite like for Go to work please.
-export PATH=${PATH}:/usr/local/go/bin
-export GOPATH=~
-
-export GREP_COLOR='1;32'
-#export CLICOLOR=1
-#export LSCOLORS=ExFxCxDxBxegedabagacad
 export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33'
-
-
-
-alias mc="mc --nosubshell"
-alias ll="ls -la"
-alias grep='grep --color=auto'  
-alias ls='ls --color=always'
-alias gg='git grep -ni'
-alias biggest="du -h --max-depth=1 | sort -h"
-alias psy="cd ~/code/github.com/psych3"
-alias follow="tail -f -n +1"
 
 # 'Safe' version of __git_ps1 to avoid errors on systems that don't have it
 function gitPrompt {
@@ -96,8 +70,3 @@ else
  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
-
-# Local settings go last
-if [ -f ~/.localrc ]; then
-  source ~/.localrc
-fi

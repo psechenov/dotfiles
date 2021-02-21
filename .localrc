@@ -1,0 +1,23 @@
+
+export HISTCONTROL=ignoredups:ignorespace
+export HISTSIZE=10000000
+export HISTFILESIZE=1000000000
+shopt -s histappend
+
+
+#export EDITOR=/usr/bin/vim
+export EDITOR=subl
+
+# I'd quite like for Go to work please.
+export PATH=${PATH}:/usr/local/go/bin
+export GOPATH=~
+
+export GREP_COLOR='1;32'
+#export CLICOLOR=1
+#export LSCOLORS=ExFxCxDxBxegedabagacad
+
+
+# Local settings go last
+# if [ -f ~/.colorsrc ]; then
+#   source ~/.colorsrc
+# fi
